@@ -1,5 +1,4 @@
 # Discord-bot-template
 
-A simple Discord bot using JavaScript and Discord.js.<br>
-To begin simply edit the `./assets/config.json` file,<br>
-then run the `./start.bat` file.
+A simple Discord bot written in JavaScript, using the Discord.js lib.<br>
+To begin, simply edit `./assets/config.json`, then run the `./start.bat` file.
