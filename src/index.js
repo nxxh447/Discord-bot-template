@@ -4,10 +4,10 @@ const client = new Client({ intents: [Intents.FLAGS.GUILD_MESSAGES] });
 const config = require("./assets/config.json");
 const cmds = require("./assets/cmds.json");
 
-client.on("ready", () => client.user.setActivity(config.statusMsg, { type: config.statusType }));
-client.ong("messageCreate", (msg) => {
+client.once("ready", () => client.user.setActivity(config.statusMsg, { type: config.statusType }));
+client.on("messageCreate", (msg) => {
     const hasCommand = (v) => msg.content.includes(cmds[v]);
-    const mentionsBot = () => msg.mentions(client.user.id);
+    const mentionsBot = () => msg.mentions.users.first();
 
     if (mentionsBot) {
         if (hasCommand('1')) {
